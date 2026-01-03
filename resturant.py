@@ -28,4 +28,22 @@ def show_menu():
 def take_order():
     while True:
         item = input("\nEnter the item name you want to order(or type 'done' to finish)").strip()
-        if item .lower()
+        if item.lower():
+            quanity = int(input("Enter the quanity for the {item}: "))
+            if item in order:
+                order[item] += quanity
+            else:
+                order[item] = quanity
+        else:
+            print("Item not found in the menu.Please try again...")
+
+def calculate_total():
+    total = 0.00
+    for item,quanity in order.items():
+        total += menu[item] * quanity
+    tax = total * TAX_RATE 
+    total_with_tax = total + tax
+    return tax,total,total_with_tax
+
+def print_bill():
+    print("\nqu")
