@@ -12,6 +12,7 @@ menu = {
 "veg-taco": 30.00,
 "Soda": 60.00,
 "Salad": 120.00,
+"momo": 50.00,
 "Coke": 50.00,
 "Pizza": 1020.00,
 "Ice Cream": 30.00,
@@ -21,7 +22,7 @@ menu = {
 "Pasta": 150.00,
 "Sandwich": 50.00,
 "egg-sandwich":20.00,
-"Water": 00.00
+"Water": 10.00
 
 }
 
@@ -58,10 +59,10 @@ def print_bill():
     print("\n------Bill Summary-----")
     total, tax, total_with_tax = calculate_total()
     for item, quanaty in order.items():
-        print(f"{item} x {quanaty} = Rs. {menu[item] * quanaty:.2f}")
-    print(f"Subtotal: Rs. {total :.2f}")
-    print(f"Tax:(10%): Rs. {tax:.2f}")
-    print(f"total Amount: Rs. {total_with_tax:.2f}")
+        print(f"{item} x {quanaty} = tk. {menu[item] * quanaty:.2f}")
+    print(f"Subtotal: tk. {total :.2f}")
+    print(f"Tax:(10%): tk. {tax:.2f}")
+    print(f"total Amount: tk. {total_with_tax:.2f}")
 
 if __name__ == "__main__":
     show_menu()
