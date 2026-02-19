@@ -45,3 +45,24 @@ def tic_tac_toe():
                     continue
                 if board[r][c] != " ":
                     print("This position is alredy taken.please chosse postion.")
+            except:
+                print("IVAILD INPUT!please enter an numeric value.")
+                continue
+
+        else:
+                r,c = computer_move(board)
+                print(f"coumputer: Row {r+1}, coloumn {c+1}")
+        board[r][c] = turn
+
+        if winner(board,turn):
+                    print_board(board)
+                    print(f"{turn} wins")
+                    break
+        if not free_cells(board):
+             print_board(board)
+             print("Draw")
+             break
+        
+        turn = "O" if turn == "X" else "X"
+
+tic_tac_toe()
